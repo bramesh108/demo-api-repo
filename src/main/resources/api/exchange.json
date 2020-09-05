@@ -1,0 +1,1 @@
+{"main":"student-api.raml","name":"student-api","classifier":"raml","tags":[],"dependencies":[{"groupId":"fc31afd2-8c7d-4bed-bb81-ae5e5842cb1a","assetId":"common-error-code-api","version":"1.0.0"}],"groupId":"fc31afd2-8c7d-4bed-bb81-ae5e5842cb1a","assetId":"student-api","version":"1.0.1","apiVersion":"1.0","originalFormatVersion":"1.0"}

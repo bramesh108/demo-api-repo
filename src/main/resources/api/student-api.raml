@@ -1,0 +1,59 @@
+#%RAML 1.0
+title: student-api
+baseUri: https://anypoint.mulesoft.com/mocking/api/v1/links/8b801e8a-c046-4a04-a3fe-2db2e17a816d/ # baseUri: http://localhost:8081/api/student
+version: 1.0
+protocols: ["HTTP", "HTTPS"]
+mediaType: 
+- application/json
+
+traits:
+  errorTrait: !include /exchange_modules/fc31afd2-8c7d-4bed-bb81-ae5e5842cb1a/common-error-code-api/1.0.0/common-error-code-api.raml
+
+/student:  
+  get:
+    is: [errorTrait]
+    queryParameters:
+      sno:
+        type: string
+        required: true
+        minLength: 3
+        maxLength: 10
+        description: "This is Stundet Number"
+        displayName: Student Number
+        example: "1234567890"
+      sname:
+        type: string
+        required: false
+        example: "RAM"
+    responses:
+      200:
+        body:
+          application/json:
+            example: !include examples/get-res.json             
+                                    
+  post:
+    is: [errorTrait]
+    body:
+      application/json:
+        type: !include dataTypes/post-dataType.raml              
+        example: !include examples/post-req.json          
+    responses:
+      201:
+        body:
+          application/json:
+            example: !include examples/post-res.json
+/marks:
+  put:
+    queryParameters:
+      sno:
+        type: string
+        required: true
+    body:
+      application/json:
+    responses:
+      200:
+        body:
+          application/json:
+            
+    
+          
