@@ -128,7 +128,7 @@ output application/json
         <logger level="INFO" message="put:\marks:application\json:student-api-config" />
     </flow>
     <flow name="get:\student:student-api-config">
-        <logger level="INFO" doc:name="Logger" doc:id="e3a2577c-cd4f-4f21-ba80-8fbe2d79656c" message="Welcome to this Application"/>
+        <logger level="INFO" doc:name="Logger" doc:id="e3a2577c-cd4f-4f21-ba80-8fbe2d79656c" message="Hai rhis is demo app"/>
 		<ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
             <ee:message>
                 <ee:set-payload><![CDATA[%dw 2.0
